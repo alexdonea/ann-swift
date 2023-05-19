@@ -27,7 +27,7 @@ The project utilizes the popular [MNIST dataset](http://yann.lecun.com/exdb/mnis
     git clone https://github.com/alexdonea/ann-swift
     ```
 2. Navigate to the project directory and locate the main.swift file in the project directory and open it in your favourite IDE or editor.
-3. Update the file location for mnist data folder inside project:
+3. Update the file location for project folder:
    ```swift
     let path = "/your-path/ann-swift"
    ```
