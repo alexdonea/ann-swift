@@ -3,13 +3,13 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 53;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		4C08CD3E20B3718E006E6119 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C08CD3D20B3718E006E6119 /* main.swift */; };
-		4C08CD4720B372D5006E6119 /* Ann.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C08CD4620B372D5006E6119 /* Ann.swift */; };
-		4C08CD4920B39317006E6119 /* FileReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C08CD4820B39317006E6119 /* FileReader.swift */; };
+		4C08CD4720B372D5006E6119 /* ArtificialNeuralNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C08CD4620B372D5006E6119 /* ArtificialNeuralNetwork.swift */; };
+		4C08CD4920B39317006E6119 /* ModelFileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C08CD4820B39317006E6119 /* ModelFileManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -27,8 +27,8 @@
 /* Begin PBXFileReference section */
 		4C08CD3A20B3718E006E6119 /* Ann */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Ann; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C08CD3D20B3718E006E6119 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
-		4C08CD4620B372D5006E6119 /* Ann.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ann.swift; sourceTree = "<group>"; };
-		4C08CD4820B39317006E6119 /* FileReader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileReader.swift; sourceTree = "<group>"; };
+		4C08CD4620B372D5006E6119 /* ArtificialNeuralNetwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtificialNeuralNetwork.swift; sourceTree = "<group>"; };
+		4C08CD4820B39317006E6119 /* ModelFileManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelFileManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,19 +61,11 @@
 		4C08CD3C20B3718E006E6119 /* Ann */ = {
 			isa = PBXGroup;
 			children = (
-				4C08CD4A20B48D01006E6119 /* Data */,
 				4C08CD3D20B3718E006E6119 /* main.swift */,
-				4C08CD4620B372D5006E6119 /* Ann.swift */,
-				4C08CD4820B39317006E6119 /* FileReader.swift */,
+				4C08CD4620B372D5006E6119 /* ArtificialNeuralNetwork.swift */,
+				4C08CD4820B39317006E6119 /* ModelFileManager.swift */,
 			);
 			path = Ann;
-			sourceTree = "<group>";
-		};
-		4C08CD4A20B48D01006E6119 /* Data */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Data;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -102,12 +94,14 @@
 		4C08CD3220B3718E006E6119 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				BuildIndependentTargetsInParallel = YES;
 				LastSwiftUpdateCheck = 0930;
-				LastUpgradeCheck = 0930;
+				LastUpgradeCheck = 1430;
 				ORGANIZATIONNAME = "University Projects";
 				TargetAttributes = {
 					4C08CD3920B3718E006E6119 = {
 						CreatedOnToolsVersion = 9.3.1;
+						LastSwiftMigration = "";
 					};
 				};
 			};
@@ -117,6 +111,7 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				Base,
 			);
 			mainGroup = 4C08CD3120B3718E006E6119;
 			productRefGroup = 4C08CD3B20B3718E006E6119 /* Products */;
@@ -133,9 +128,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4C08CD4920B39317006E6119 /* FileReader.swift in Sources */,
+				4C08CD4920B39317006E6119 /* ModelFileManager.swift in Sources */,
 				4C08CD3E20B3718E006E6119 /* main.swift in Sources */,
-				4C08CD4720B372D5006E6119 /* Ann.swift in Sources */,
+				4C08CD4720B372D5006E6119 /* ArtificialNeuralNetwork.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -168,6 +163,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -176,6 +172,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
@@ -228,6 +225,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -236,6 +234,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -259,9 +258,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_TEAM = KP6QCB9GQ5;
+				MACOSX_DEPLOYMENT_TARGET = "$(RECOMMENDED_MACOSX_DEPLOYMENT_TARGET)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.alexdonea.swiftann;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -269,9 +271,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_TEAM = KP6QCB9GQ5;
+				MACOSX_DEPLOYMENT_TARGET = "$(RECOMMENDED_MACOSX_DEPLOYMENT_TARGET)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.alexdonea.swiftann;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};
